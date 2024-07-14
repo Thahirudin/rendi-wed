@@ -26,10 +26,10 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css" />
 </head>
 
-<body class="font-plusJakartaSans text-slate-700 bg-emerald-500"></body>
+<body class="font-plusJakartaSans text-slate-700 bg-[#213555]"></body>
 <header class="lg:hidden fixed z-[101] bg-white shadow-md border w-full top-0">
     <nav class="w-[90%] mx-auto py-5 flex justify-between items-center">
-        <h1 class="font-bold text-[20px] text-emerald-700">
+        <h1 class="font-bold text-[20px] text-[#213555]">
             Rendi Wedding
         </h1>
         <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">

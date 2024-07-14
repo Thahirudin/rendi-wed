@@ -20,9 +20,8 @@ if (isset($_POST['submit'])) {
     ";
   }
 }
+$title = 'Tambah Kategori';
 include("layout/header.php");
-$title = 'Admin Rendi Wedding';
-
 $sidemenu = 'dashboard';
 ?>
 <section class="lg:flex gap-8 mx-auto lg:w-[90%] mt-20 lg:mt-0">
@@ -36,9 +35,9 @@ $sidemenu = 'dashboard';
         <form action="" method="post" enctype="multipart/form-data">
           <div class="mt-5">
             <label for="nama" class="block mb-2 text-lg font-medium text-gray-900">Nama</label>
-            <input type="text" id="nama" name="nama" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-emerald-500 focus:border-emerald-500 block w-full p-2.5" required/>
+            <input type="text" id="nama" name="nama" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#213555] focus:border-[#213555] block w-full p-2.5" required/>
           </div>
-          <button type="submit" name="submit" class="mt-5 px-4 py-2 bg-emerald-500 text-white rounded-lg hover:bg-emerald-600 duration-300">
+          <button type="submit" name="submit" class="mt-5 px-4 py-2 bg-[#213555] text-white rounded-lg hover:bg-[#4F709C] duration-300">
             Submit
           </button>
         </form>

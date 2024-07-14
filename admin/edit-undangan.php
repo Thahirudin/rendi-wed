@@ -53,11 +53,11 @@ include("layout/header.php");
           <?php foreach ($datas as $data) : ?>
             <div class="mt-5">
               <label for="nama" class="block mb-2 text-lg font-medium text-gray-900">Nama</label>
-              <input type="text" id="nama" name="nama" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-emerald-500 focus:border-emerald-500 block w-full p-2.5" value="<?php echo $data['nama']; ?>" />
+              <input type="text" id="nama" name="nama" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#213555] focus:border-[#213555] block w-full p-2.5" value="<?php echo $data['nama']; ?>" />
             </div>
             <div class="mt-5">
               <label for="tipe" class="block mb-2 text-lg font-medium text-gray-900">Tipe</label>
-              <select name="tipe" id="tipe" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-emerald-500 focus:border-emerald-500 block w-full p-2.5">
+              <select name="tipe" id="tipe" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#213555] focus:border-[#213555] block w-full p-2.5">
                 <?php foreach ($tipes as $tipe) : ?>
                   <option value="<?php echo $tipe['id']; ?>" 
                   <?php if ($tipe['id'] == $data['tipe']) {
@@ -71,7 +71,7 @@ include("layout/header.php");
             </div>
             <div class="mt-5">
               <label for="kategori" class="block mb-2 text-lg font-medium text-gray-900">Kategori</label>
-              <select name="kategori" id="kategori" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-emerald-500 focus:border-emerald-500 block w-full p-2.5">
+              <select name="kategori" id="kategori" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#213555] focus:border-[#213555] block w-full p-2.5">
                 <?php foreach ($kategoris as $kategori) : ?>
                   <option value="<?php echo $kategori['id']; ?>" <?php if ($tipe['id'] == $data['tipe']) {
                     echo " selected ";
@@ -84,15 +84,15 @@ include("layout/header.php");
             </div>
             <div class="mt-5">
               <label for="gambar" class="block mb-2 text-lg font-medium text-gray-900">Gambar</label>
-              <input type="file" id="gambar" name="gambar" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-emerald-500 focus:border-emerald-500 block w-full p-2.5" />
+              <input type="file" id="gambar" name="gambar" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#213555] focus:border-[#213555] block w-full p-2.5" />
             </div>
             <div class="mt-5">
               <label for="link" class="block mb-2 text-lg font-medium text-gray-900">Link Preview</label>
-              <input type="text" id="link" name="link" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-emerald-500 focus:border-emerald-500 block w-full p-2.5" value="<?php echo $data['link']; ?>" />
+              <input type="text" id="link" name="link" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#213555] focus:border-[#213555] block w-full p-2.5" value="<?php echo $data['link']; ?>" />
             </div>
           <?php endforeach; ?>
 
-          <button type="submit" name="submit" class="mt-5 px-4 py-2 bg-emerald-500 text-white rounded-lg hover:bg-emerald-600 duration-300">
+          <button type="submit" name="submit" class="mt-5 px-4 py-2 bg-[#213555] text-white rounded-lg hover:bg-[#4F709C] duration-300">
             Submit
           </button>
         </form>

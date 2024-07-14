@@ -1,18 +1,18 @@
 <?php
-include 'function-tipe.php';
+include 'function-user.php';
 error_reporting(0);
 session_start();
 if (!isset($_SESSION['login'])) {
     header("Location:" .  $baseurl . "login.php");
 }
-$id = $_GET["id"];
-$tipe_query = mysqli_query($koneksi, "SELECT * FROM tipe where id = '$id'");
+$id = $_SESSION['id'];
+$tipe_query = mysqli_query($koneksi, "SELECT * FROM user where id = '$id'");
 $tipes = [];
 while ($rowTipe = mysqli_fetch_assoc($tipe_query)) {
   $tipes[] = $rowTipe;
 }
 $title = 'Admin Rendi Wedding';
-$sidemenu = 'dashboard';
+$sidemenu = 'profil';
 if (isset($_POST['submit'])) {
   $result = edit($id, $_POST);
   if ($result > 0) {
@@ -24,7 +24,7 @@ if (isset($_POST['submit'])) {
     echo "
         <script>
           alert('Data Gagal Ditambahkan!');
-          document.location.href = 'edit-tipe.php?id=$id';
+          document.location.href = 'profil.php?id=$id';
         </script>
     ";
   }
@@ -44,6 +44,14 @@ include("layout/header.php");
             <div class="mt-5">
               <label for="nama" class="block mb-2 text-lg font-medium text-gray-900">Nama</label>
               <input type="text" id="nama" name="nama" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#213555] focus:border-[#213555] block w-full p-2.5" value="<?php echo $tipe['nama']; ?>" required/>
+            </div>
+            <div class="mt-5">
+              <label for="email" class="block mb-2 text-lg font-medium text-gray-900">Email</label>
+              <input type="email" id="email" name="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#213555] focus:border-[#213555] block w-full p-2.5" value="<?php echo $tipe['email']; ?>" required/>
+            </div>
+            <div class="mt-5">
+              <label for="password" class="block mb-2 text-lg font-medium text-gray-900">Password</label>
+              <input type="password" id="password" name="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#213555] focus:border-[#213555] block w-full p-2.5" placeholder="***"/>
             </div>
           <?php endforeach; ?>
 

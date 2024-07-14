@@ -1,5 +1,5 @@
 <?php
-include 'function-tipe.php';
+include 'function-user.php';
 error_reporting(0);
 session_start();
 if (!isset($_SESSION['login'])) {
@@ -15,12 +15,12 @@ if (isset($_POST['submit'])) {
     echo "
         <script>
           alert('Data Gagal Ditambahkan!');
-          document.location.href = 'tambah-tipe.php';
+          document.location.href = 'tambah-user.php';
         </script>
     ";
   }
 }
-$title = 'Tambah Tipe';
+$title = 'Tambah Kategori';
 include("layout/header.php");
 $sidemenu = 'dashboard';
 ?>
@@ -31,11 +31,19 @@ $sidemenu = 'dashboard';
   <main class="py-4 w-[90%] mx-auto lg:w-[75%] flex flex-col gap-8">
     <section>
       <div class="bg-white p-5 rounded-lg shadow-lg">
-        <h1 class="font-bold text-3xl">Tambah Tipe</h1>
+        <h1 class="font-bold text-3xl">Tambah User</h1>
         <form action="" method="post" enctype="multipart/form-data">
           <div class="mt-5">
             <label for="nama" class="block mb-2 text-lg font-medium text-gray-900">Nama</label>
             <input type="text" id="nama" name="nama" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#213555] focus:border-[#213555] block w-full p-2.5" required/>
+          </div>
+          <div class="mt-5">
+            <label for="email" class="block mb-2 text-lg font-medium text-gray-900">Email</label>
+            <input type="email" id="email" name="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#213555] focus:border-[#213555] block w-full p-2.5" required/>
+          </div>
+          <div class="mt-5">
+            <label for="password" class="block mb-2 text-lg font-medium text-gray-900">Password</label>
+            <input type="password" id="password" name="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#213555] focus:border-[#213555] block w-full p-2.5" required/>
           </div>
           <button type="submit" name="submit" class="mt-5 px-4 py-2 bg-[#213555] text-white rounded-lg hover:bg-[#4F709C] duration-300">
             Submit
